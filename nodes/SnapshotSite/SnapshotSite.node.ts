@@ -3,7 +3,6 @@ import { analyzeDescription } from './descriptions/analyze.description';
 import { compareDescription } from './descriptions/compare.description';
 import { screenshotDescription } from './descriptions/screenshot.description';
 import { buildComparePreSend } from './shared/compareRequest';
-import { testSnapshotSiteApiCredential } from './shared/credentialTest';
 
 export class SnapshotSite implements INodeType {
 	description: INodeTypeDescription = {
@@ -24,7 +23,6 @@ export class SnapshotSite implements INodeType {
 			{
 				name: 'snapshotSiteApi',
 				required: true,
-				testedBy: 'snapshotSiteApiTest',
 			},
 		],
 		requestDefaults: {
@@ -87,11 +85,5 @@ export class SnapshotSite implements INodeType {
 			...analyzeDescription,
 			...compareDescription,
 		],
-	};
-
-	methods = {
-		credentialTest: {
-			snapshotSiteApiTest: testSnapshotSiteApiCredential,
-		},
 	};
 }

@@ -1,4 +1,10 @@
-import type { IAuthenticateGeneric, ICredentialType, Icon, INodeProperties } from 'n8n-workflow';
+import type {
+	IAuthenticateGeneric,
+	ICredentialTestRequest,
+	ICredentialType,
+	Icon,
+	INodeProperties,
+} from 'n8n-workflow';
 
 export class SnapshotSiteApi implements ICredentialType {
 	name = 'snapshotSiteApi';
@@ -34,6 +40,19 @@ export class SnapshotSiteApi implements ICredentialType {
 		properties: {
 			headers: {
 				'X-SnapshotSiteAPI-Key': '={{$credentials.apiKey}}',
+			},
+		},
+	};
+
+	// screenshot-api has no free/side-effect-free endpoint, so this fires the
+	// smallest possible real screenshot to confirm the key is accepted.
+	test: ICredentialTestRequest = {
+		request: {
+			baseURL: '={{$credentials.baseUrl}}',
+			url: '/api/v2/screenshot',
+			method: 'POST',
+			body: {
+				url: 'https://example.com',
 			},
 		},
 	};

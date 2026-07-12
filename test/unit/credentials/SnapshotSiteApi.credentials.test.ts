@@ -42,7 +42,16 @@ describe('SnapshotSiteApi credentials', () => {
 		});
 	});
 
-	it('delegates credential testing to the node instead of a declarative test block, since the API exposes no side-effect-free endpoint', () => {
-		expect((credential as unknown as { test?: unknown }).test).toBeUndefined();
+	it('tests credentials with the smallest possible real screenshot, since the API has no free endpoint', () => {
+		expect(credential.test).toEqual({
+			request: {
+				baseURL: '={{$credentials.baseUrl}}',
+				url: '/api/v2/screenshot',
+				method: 'POST',
+				body: {
+					url: 'https://example.com',
+				},
+			},
+		});
 	});
 });

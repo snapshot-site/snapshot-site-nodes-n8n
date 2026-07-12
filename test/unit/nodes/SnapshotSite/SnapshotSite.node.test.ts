@@ -11,11 +11,8 @@ describe('SnapshotSite node', () => {
 		expect(description.usableAsTool).toBe(true);
 	});
 
-	it('requires the snapshotSiteApi credential and wires up its test method', () => {
-		expect(description.credentials).toEqual([
-			{ name: 'snapshotSiteApi', required: true, testedBy: 'snapshotSiteApiTest' },
-		]);
-		expect(node.methods?.credentialTest?.snapshotSiteApiTest).toBeInstanceOf(Function);
+	it('requires the snapshotSiteApi credential', () => {
+		expect(description.credentials).toEqual([{ name: 'snapshotSiteApi', required: true }]);
 	});
 
 	it('resolves the base URL from the credential', () => {
