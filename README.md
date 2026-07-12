@@ -64,6 +64,4 @@ If you're new to n8n, see the [Try it out](https://docs.n8n.io/try-it-out/) docu
 
 ## Version history
 
-### 0.1.0
-
-Initial release: Screenshot, Analyze, and Compare operations.
+See [CHANGELOG.md](CHANGELOG.md).
