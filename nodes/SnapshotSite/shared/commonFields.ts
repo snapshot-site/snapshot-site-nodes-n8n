@@ -42,7 +42,11 @@ export const heightField: INodeProperties = {
 };
 
 export const delayField: INodeProperties = {
-	displayName: 'Delay (Ms)',
+	// The generic title-case rule would force "Delay (Ms)", but the SI
+	// abbreviation for milliseconds is always lowercase — this is the exact
+	// casing n8n's manual reviewers requested.
+	// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
+	displayName: 'Delay (ms)',
 	name: 'delay',
 	type: 'number',
 	default: 0,
