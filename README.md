@@ -11,6 +11,7 @@ Snapshot Site is a screenshot, AI page-analysis, and visual-diff API for website
 [Credentials](#credentials)
 [Compatibility](#compatibility)
 [Usage](#usage)
+[Development](#development)
 [Resources](#resources)
 [Version history](#version-history)
 
@@ -55,6 +56,33 @@ Set **Operation** to `Analyze`, enter a **URL**, and optionally enable **Enable 
 Set **Operation** to `Compare`, enter a **Before URL** and **After URL** (each can be overridden with an **Image URL** in their respective **Options** to diff against an existing image instead of a live page), and adjust **Threshold** (0-1) to control how sensitive the mismatch detection is.
 
 If you're new to n8n, see the [Try it out](https://docs.n8n.io/try-it-out/) documentation to get started.
+
+## Development
+
+```bash
+npm install          # install dependencies
+npm run build        # compile TypeScript and copy static files to dist/
+npm run build:watch  # tsc in watch mode, for iterating without a full rebuild
+npm run dev          # link this package into a local n8n and run it with hot reload
+npm run lint         # lint against n8n's community node rules
+npm run lint:fix     # same, auto-fixing what it can
+npm test             # run the jest unit tests
+npm run release      # bump version, changelog, tag, push (publishing itself happens in CI)
+```
+
+To manually try the published package end-to-end in a clean n8n instance (not linked to local source), rather than `npm run dev`:
+
+```bash
+nvm use 22.23.1       # n8n requires Node >=22.22
+npx n8n               # then open http://localhost:5678 and install n8n-nodes-snapshot-site
+                       # via Settings -> Community Nodes
+```
+
+Before submitting a release for n8n verification, run the same scanner n8n's Creator Portal uses:
+
+```bash
+npx @n8n/scan-community-package@latest n8n-nodes-snapshot-site
+```
 
 ## Resources
 
