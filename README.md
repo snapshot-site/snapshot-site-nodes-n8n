@@ -1,5 +1,7 @@
 # n8n-nodes-snapshot-site
 
+![Snapshot Site](assets/banner.png)
+
 This is an n8n community node. It lets you use [Snapshot Site](https://snapshot-site.com) in your n8n workflows.
 
 Snapshot Site is a screenshot, AI page-analysis, and visual-diff API for websites.
