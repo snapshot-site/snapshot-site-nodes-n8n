@@ -6,7 +6,7 @@ describe('SnapshotSite node', () => {
 	const { description } = node;
 
 	it('identifies itself with the expected display name and name', () => {
-		expect(description.displayName).toBe('Snapshot Site');
+		expect(description.displayName).toBe('Screenshots by Snapshot Site');
 		expect(description.name).toBe('snapshotSite');
 		expect(description.usableAsTool).toBe(true);
 	});

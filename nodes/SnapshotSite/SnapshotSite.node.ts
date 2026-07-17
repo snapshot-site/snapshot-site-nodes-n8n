@@ -6,7 +6,7 @@ import { buildComparePreSend } from './shared/compareRequest';
 
 export class SnapshotSite implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Snapshot Site',
+		displayName: 'Screenshots by Snapshot Site',
 		name: 'snapshotSite',
 		icon: { light: 'file:../../icons/snapshotSite.svg', dark: 'file:../../icons/snapshotSite.dark.svg' } as Icon,
 		group: ['transform'],
