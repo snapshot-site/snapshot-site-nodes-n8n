@@ -1,6 +1,6 @@
 {
     "name": "n8n-nodes-snapshot-site",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "n8n community node for the Snapshot Site API — website screenshots, AI-powered page analysis, and visual diff comparisons.",
     "license": "MIT",
     "homepage": "https://snapshot-site.com",
