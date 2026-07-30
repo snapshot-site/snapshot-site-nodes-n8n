@@ -1,5 +1,9 @@
 # n8n-nodes-snapshot-site
 
+[![npm](https://img.shields.io/npm/v/n8n-nodes-snapshot-site.svg)](https://www.npmjs.com/package/n8n-nodes-snapshot-site)
+[![License](https://img.shields.io/github/license/snapshot-site/snapshot-site-nodes-n8n.svg?cacheSeconds=300)](https://github.com/snapshot-site/snapshot-site-nodes-n8n/blob/main/LICENSE)
+[![CI](https://github.com/snapshot-site/snapshot-site-nodes-n8n/actions/workflows/ci.yml/badge.svg)](https://github.com/snapshot-site/snapshot-site-nodes-n8n/actions/workflows/ci.yml)
+
 ![Snapshot Site](assets/banner.png)
 
 This is an n8n community node. It lets you use [Snapshot Site](https://snapshot-site.com) in your n8n workflows.
